@@ -14,6 +14,19 @@
 - 确保只能通过`mutation`修改`state`，而不能直接修改。
   - 实现方式：通过`watch`监听`state`，其实在`commit`某一个`mutation`同时，设置一个标志标量`committing`为`true`，监听`state`变更时，会判断这个标志变量是否为`true`去更改`state`，否则提示不能修改。
 
+- 提供的`api`
+  - state
+  - getters
+  - mutations
+  - actions
+  - 配合组件使用语法糖
+    - mapState
+    - mapGetters
+    - mapMutations
+    - mapActions
+
+- 提供插件的能力
+
 - `vuex`和`redux`的区别
   - 相同点：出发点一样，都是为了解决组件间通信问题。
   - 不同点：实现思路和使用方式不一样。
